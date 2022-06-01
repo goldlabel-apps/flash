@@ -1,0 +1,19 @@
+{
+  "name": "flash-toolkit",
+  "version": "1.0.0",
+  "description": "everything you need to make a totally pointless flash movie in React",
+  "scripts": {
+    "start": "$PWD/.scripts/start",
+    "build": "cd ./react-app && npm run build",
+    "deploy": "npm run build && firebase deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/listingslab/flash.git"
+  },
+  "keywords": [
+    "flash"
+  ],
+  "author": "milky",
+  "license": "MIT"
+}

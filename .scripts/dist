@@ -1,0 +1,43 @@
+#!/bin/bash
+# If you get permissions error, run this
+# chmod ug+x dist
+clear
+echo 'Creating unlicenced distribution version' $1
+
+rm -rf dist
+mkdir dist
+mkdir ./dist/microfrontends
+node ./packages/shared/public/files
+
+cat >./packages/shared/public/config.json <<EOF
+    {
+      "version": "$1"
+    }
+EOF
+
+cp ./packages/shared/public/favicon.ico ./dist
+cp ./packages/shared/public/robots.txt ./dist
+cp ./packages/shared/public/manifest.json ./dist
+
+cp ./packages/shared/public/logo32.png ./dist
+cp ./packages/shared/public/logo192.png ./dist
+cp ./packages/shared/public/logo512.png ./dist
+cp ./packages/shared/public/opengraph.png ./dist
+cp ./packages/shared/public/logo.svg ./dist
+
+cp ./packages/shared/public/service-worker.js ./dist
+cp ./packages/shared/public/config.json ./dist
+cp ./packages/shared/public/files/files.json ./dist
+cp ./packages/shared/public/.htaccess ./dist
+
+cp -r ./packages/shared/public/files/svg ./dist
+
+cp -r ./packages/root-config/dist ./dist
+mv ./dist/dist ./dist/root-config
+mv ./dist/root-config ./dist/microfrontends/root-config
+
+cp -r ./packages/shared/dist ./dist
+mv ./dist/dist ./dist/shared
+mv ./dist/shared ./dist/microfrontends/shared
+
+echo "Distributions $1 created"

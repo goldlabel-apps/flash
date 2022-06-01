@@ -1,0 +1,8 @@
+#!/bin/bash
+# chmod ug+x start
+clear
+echo "Starting Progressive Web App"
+
+ttab -t 'flash' -d ./react-app/ npm run start
+
+echo "http://localhost:3000"
