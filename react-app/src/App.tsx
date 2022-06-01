@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flash } from './flash'
+import { Flash } from './Flash'
 
 function App() {
   return (
