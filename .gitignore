@@ -2,3 +2,4 @@ _ASSETS
 .firebase
 .firebaserc
 .DS_Store
+firebase-debug.log

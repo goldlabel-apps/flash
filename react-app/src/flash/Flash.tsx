@@ -1,21 +1,29 @@
 import React from 'react'
-import { store } from './app/store'
+import { store } from './_app/store'
 import {
   createTheme, 
   ThemeProvider,
   CssBaseline,
 } from '@mui/material'
 import { Provider } from 'react-redux'
-import { getDesignTokens } from './theme'
-import { Stage } from './'
+import { getDesignTokens } from './_app/theme'
+import { 
+  Stage,
+  setListeners,
+} from './'
 
 export default function Flash() {
   
   const theme = createTheme(getDesignTokens('light'))
 
+  React.useEffect(() => {
+    setListeners()
+    // console.log ("listeners", listeners)
+  }, [])
+
   return ( <Provider store={store}>
               <ThemeProvider theme={theme}>
-                  <CssBaseline />  
+                  <CssBaseline />
                   <Stage />
               </ThemeProvider>
           </Provider>
