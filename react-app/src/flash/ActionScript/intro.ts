@@ -10,7 +10,7 @@ export const intro = () => {
         setPosition("textClip", "centered", { top: -8, left: 0 } )
         fade("textClip", {
             onComplete: () => {
-                console.log('completed')
+                console.log('ok, do next thing')
             }
         })
         return true
