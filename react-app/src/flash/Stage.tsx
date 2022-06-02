@@ -4,6 +4,7 @@ import {
   useAppSelector,
 } from './_app/hooks'
 import { 
+  FlashMenu,
   selectFlash,
   setFlash,
   getDisplay,
@@ -41,6 +42,17 @@ export default function Stage() {
   }
   
   return <Box id="stage" sx={ stageStyle }>
+
+          <Box id="flashMenu" sx={{ 
+              opacity: 0, 
+              position: "absolute",
+              zIndex: 1000, 
+              width: 50, 
+              height: 50, 
+            }}>
+              <FlashMenu />
+          </Box>
+
 
           <Box id="textClip" sx={{ 
               opacity: 0, 
