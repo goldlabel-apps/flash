@@ -7,7 +7,6 @@ export interface FlashShape {
 const initialState: FlashShape = {
     data: {
         shape: 'FlashShape',
-        currentText: 'This is Flash.',
     },
 }
 

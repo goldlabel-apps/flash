@@ -54,6 +54,13 @@ export const setPosition = (divId, position, offset) => {
                 x: stageW - elW,
                 y: stageH - elH,
             }
+
+        if (position === `middleleft`)
+            pos = {
+                x: 0,
+                y: stageH / 2 - elH / 2,
+            }
+
         const { x, y } = pos
         gsap.set(`#${divId}`, {
             x: x + offset.left,
