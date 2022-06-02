@@ -1,12 +1,12 @@
 import React from 'react'
-import { store } from './app/store'
+import { store } from './_app/store'
 import {
   createTheme, 
   ThemeProvider,
   CssBaseline,
 } from '@mui/material'
 import { Provider } from 'react-redux'
-import { getDesignTokens } from './theme'
+import { getDesignTokens } from './_app/theme'
 import { Stage } from './'
 
 export default function Flash() {

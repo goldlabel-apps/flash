@@ -1,7 +1,7 @@
 import React from 'react'
 // @ts-ignore
 import { IconButton, useTheme } from '@mui/material'
-// import { useAppSelector, useAppDispatch } from "../../../app/hooks";
+// import { useAppSelector, useAppDispatch } from "../../../_app/hooks";
 // import { navigateTo } from "../../system";
 // import { useDispatch } from "react-redux";
 
