@@ -9,6 +9,7 @@ import {
   setFlash,
   getDisplay,
   TextClip,
+  Timemachine,
   intro,
 } from './'
 import {
@@ -38,49 +39,44 @@ export default function Stage() {
     height: displayH,
     textAlign: 'center',
     zIndex: 1,
+    overflow: "hidden",
     postition: "relative",
   }
   
   return <Box id="stage" sx={ stageStyle }>
 
-          <Box id="flashMenu" sx={{ 
+            <Box id="flashMenu" sx={{ 
               opacity: 0, 
               position: "absolute",
               zIndex: 1000, 
               width: 50, 
               height: 50, 
+              overflow:"hidden",
             }}>
               <FlashMenu />
-          </Box>
+            </Box>
 
+            <Box id="timemachine" sx={{ 
+              opacity: 0, 
+              position: "absolute",
+              zIndex: 150,
+              width: 149, 
+              height: 188, 
+              overflow:"hidden",
+            }}>
+              <Timemachine />
+            </Box>
 
-          <Box id="textClip" sx={{ 
+            <Box id="textClip" sx={{ 
               opacity: 0, 
               position: "absolute",
               zIndex:100, 
               width: 350, 
               height: 75, 
+              overflow:"hidden",
             }}>
               <TextClip />
             </Box>
 
           </Box>
 }
-
-/*
-
-TextClip
-
-
-            <Box id="mumma" sx={{ 
-              opacity: 0, 
-              top: 50,
-              right: 50,
-              position: "absolute",
-              zIndex:1250, 
-              width: 100, 
-              height: 200,
-             }}>
-              <Mumma />
-            </Box>
-*/

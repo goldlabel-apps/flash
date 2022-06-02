@@ -3,7 +3,7 @@ import { Flash } from './Flash'
 
 function App() {
   return (
-    <div className="App">
+    <div style={{ overflow: "hidden"}}>
       <Flash />
     </div>
   )
