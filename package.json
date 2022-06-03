@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "everything you need to make a totally pointless flash movie in React",
   "scripts": {
-    "test": "cd ./react-app && npm run test",
     "start": "$PWD/.scripts/start",
     "build": "cd ./react-app && npm run build",
     "deploy": "npm run build && firebase deploy"
