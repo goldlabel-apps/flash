@@ -11,13 +11,15 @@ import Mumma from './MovieClips/Mumma'
 import Pinpongball from './MovieClips/Pinpongball'
 import Timemachine from './MovieClips/Timemachine'
 import Text from './MovieClips/Text'
-import { textAS } from './ActionScript/textAS'
+
 import { getDisplay } from './ActionScript/methods/getDisplay'
 import { getElement } from './ActionScript/methods/getElement'
 import { getSizes } from './ActionScript/methods/getSizes'
 import { setPosition } from './ActionScript/methods/setPosition'
 import { fade } from './ActionScript/effects/fade'
 import { move } from './ActionScript/effects/move'
+
+import { textAS } from './ActionScript/clips/textAS'
 
 export {
     Flash,

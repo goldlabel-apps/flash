@@ -57,7 +57,7 @@ export default function Stage() {
             }}><FlashMenu /></Box>
 
             <Box id="timemachine" sx={{ 
-              opacity: 1, 
+              opacity: 0, 
               position: "absolute",
               zIndex: 150,
               width: 149, 
@@ -65,7 +65,7 @@ export default function Stage() {
             }}><Timemachine /></Box>
 
             <Box id="text" sx={{ 
-              opacity: 1, 
+              opacity: 0, 
               position: "absolute",
               zIndex:100, 
               width: 350, 
