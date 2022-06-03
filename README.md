@@ -1,6 +1,6 @@
 # Flash
 
-> by listingslab. We have ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you don't have to. 
+> by listingslab. We have ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you don't have to 
 
 ## Features
 
