@@ -1,3 +1,4 @@
+import pJSON from "../../../package.json"
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 export interface FlashShape {
@@ -7,7 +8,8 @@ export interface FlashShape {
 const initialState: FlashShape = {
     data: {
         shape: 'FlashShape',
-        currentText: 'This is Flash.',
+        pJSON,
+        currentText: 'This is not Flash.',
     },
 }
 

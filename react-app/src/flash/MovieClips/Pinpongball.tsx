@@ -5,7 +5,7 @@ import { IconButton, useTheme } from '@mui/material'
 // import { navigateTo } from "../../system";
 // import { useDispatch } from "react-redux";
 
-const PinpongballClip = (props: any) => {
+const Pinpongball = (props: any) => {
     // const dispatch = useDispatch();
     const theme = useTheme()
     const ballColor = theme.palette.primary.main
@@ -36,4 +36,4 @@ const PinpongballClip = (props: any) => {
     )
 }
 
-export default PinpongballClip
+export default Pinpongball
