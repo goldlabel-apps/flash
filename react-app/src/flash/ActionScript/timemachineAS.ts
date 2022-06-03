@@ -4,7 +4,7 @@ import {
     fade,
 } from '../'
 
-export const bouncePingpongball = () => {
+export const timemachineAS = () => {
     try {
         const divId = "pingpongball"
         const el = getElement(divId)

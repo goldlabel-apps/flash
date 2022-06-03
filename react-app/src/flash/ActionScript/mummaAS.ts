@@ -6,7 +6,7 @@ import {
 } from '../'
 import {store} from "../_app/store"
 
-export const intro = () => {
+export const mummaAS = () => {
     try {
         const { started } = store.getState().flash.data
         if (started) return

@@ -13,7 +13,7 @@ export const move = (divId: string, options: any) => {
         }
         let newX = 0
         // let newY = 0
-        const { x, y } = options
+        const { x } = options
         if (x) newX = x
         // if (y) newY = y
         let onComplete = () => {}
