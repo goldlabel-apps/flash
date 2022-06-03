@@ -18,7 +18,7 @@ const TextClip = (props: any) => {
     const { currentText } = flash.data
     if (currentText) displayText = currentText
 
-    return <Box sx={{ width: 350, height: 75}}>
+    return <Box sx={{ width: 350, height: 50, textAlign:"center"}}>
                 <Typography variant="h4" sx={{ fontWeight:"lighter", color: primaryColor }}>
                     { displayText }
                 </Typography>

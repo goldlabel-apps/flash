@@ -1,11 +1,11 @@
 import React from 'react'
 // @ts-ignore
-import { useTheme } from '@mui/material'
+// import { useTheme } from '@mui/material'
 
 const Timemachine = (props: any) => {
-    const theme = useTheme()
-    const ballColor = theme.palette.primary.main
-    const smileColor = "white"
+    // const theme = useTheme()
+    // const ballColor = theme.palette.primary.main
+    // const smileColor = "white"
 
     return (
             <svg {...props} viewBox="0 0 149 188">

@@ -8,9 +8,9 @@ import {
   selectFlash,
   setFlash,
   getDisplay,
-  TextClip,
+  Text,
   Timemachine,
-  intro,
+  textAS,
 } from './'
 import {
   Box,
@@ -23,7 +23,7 @@ export default function Stage() {
     const { started } = flash.data
     if (!started){
       setTimeout(() => {
-        intro()
+        textAS()
         dispatch(setFlash({key: "started", value: true }))
       }, 333)
     }
@@ -59,13 +59,13 @@ export default function Stage() {
               height: 188,
             }}><Timemachine /></Box>
 
-            <Box id="textClip" sx={{ 
+            <Box id="text" sx={{ 
               opacity: 0, 
               position: "absolute",
               zIndex:100, 
               width: 350, 
               height: 75,
-            }}><TextClip /></Box>
+            }}><Text /></Box>
 
           </Box>
 }
