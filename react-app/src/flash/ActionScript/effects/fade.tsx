@@ -1,6 +1,6 @@
 import { gsap, Power1 } from 'gsap'
 import { getElement } from '../../'
-const duration = 1
+const duration = 2
 
 export const fadeIn = (divId: string, options: any) => {
     try {
@@ -15,7 +15,6 @@ export const fadeIn = (divId: string, options: any) => {
             opacity: 1,
             ease: Power1.easeOut,
             duration,
-            //@ts-ignore
             onComplete,
         })
     } catch (error) {

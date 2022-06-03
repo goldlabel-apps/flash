@@ -7,36 +7,34 @@ import {
   FlashMenu,
   selectFlash,
   setFlash,
-  getDisplay,
   Text,
   textAS,
   Icon,
+  getDisplay,
 } from './'
 import {
   Box,
   IconButton,
 } from '@mui/material'
 
-// let displayText = `${flash.data.pJSON.name} ${flash.data.pJSON.version}`
-
 export default function Stage() {
   const dispatch = useAppDispatch()
   const flash = useAppSelector(selectFlash)
-  const { showPrevNext, showFlashMenu } = flash.data
+  const { display, showFlashMenu, showPrevNext } = flash.data
   
   React.useEffect(() => {
-    const { started } = flash.data
+    const { started, display } = flash.data
+    if (!display){
+      dispatch(setFlash({key: "display", value: getDisplay() }))
+    }
     if (!started){
       setTimeout(() => {
         textAS("init")
         dispatch(setFlash({key: "started", value: true }))
       }, 333)
     }
-}, [flash, dispatch])
-
-
-  const display = getDisplay()
-  //@ts-ignore
+  }, [flash, dispatch])
+  if (!display) return null  
   const { displayW, displayH } = display
   
   const stageStyle = {
@@ -53,7 +51,7 @@ export default function Stage() {
                 position: "absolute",
                 
               }}>
-                <pre>{JSON.stringify( flash.data, null, 2 )}</pre>
+                <pre>{JSON.stringify( flash.data.display, null, 2 )}</pre>
               </Box>
 
               <Box id="text" sx={{

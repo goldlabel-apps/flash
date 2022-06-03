@@ -2,13 +2,14 @@ import {
     setPosition,
     setFlash,
     fadeIn,
+    moveTo,
 } from '../../'
 import { store } from "../../_app/store"
 
 export const textAS = (action: string) => {
     try {
-        const { screens, started, index } = store.getState().flash.data
-        const { title, subheader } = screens[index]
+        const { started } = store.getState().flash.data
+        // const { title, subheader } = screens[index]
 
         switch(action) {
             case "init":
@@ -19,15 +20,14 @@ export const textAS = (action: string) => {
                         onComplete: () => {
                             store.dispatch(setFlash({ key:"textAS", value: {
                                 initted: true,
-                                status: "visible",
-                            } }))
-                            // console.log ("textAS init complete")
+                            }}))
                         }
                     })
                 }
                 break;
             case "reset":
-                console.log("textAS reset", title, subheader)
+                
+                moveTo("text", "centered", { top: -25, left: 0 } )
                 break;
             default:
           }        
