@@ -1,6 +1,10 @@
 import { RootState } from './_app/store'
 import Flash from './Flash'
 import Stage from './Stage'
+
+import MovieClip from './MovieClip'
+
+
 import FlashMenu from './_app/FlashMenu'
 import {setListeners} from './_app/setListeners'
 import Icon from './_app/theme/Icon'
@@ -23,22 +27,24 @@ export {
     Flash,
     FlashMenu,
     Stage,
+
+    MovieClip,
+
+    Timemachine,
     Pinpongball,
     Mumma,
-
     Text,
     textAS,
-    
-    Icon,
-    setFlash,
     
     getDisplay,
     getElement,
     setPosition,
     getSizes,
+    
     fade,
     move,
     setListeners,
-    Timemachine,
+    Icon,
+    setFlash,
 }
 export const selectFlash = (state: RootState) => state.flash
