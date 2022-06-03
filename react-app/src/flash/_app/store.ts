@@ -1,5 +1,5 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import flashReducer from './flashSlice';
+import flashReducer from '../flashSlice';
 
 export const store = configureStore({
   reducer: {

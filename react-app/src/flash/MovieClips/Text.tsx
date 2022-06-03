@@ -8,19 +8,25 @@ import {
     Typography,
 } from '@mui/material'
 
-const Text = (props: any) => {
+const Text = () => {
     const theme = useTheme()
     const primaryColor = theme.palette.primary.main
-
+    // const secondaryColor = theme.palette.secondary.main
     const flash = useAppSelector(selectFlash)
-    // console.log("flash", flash)
-    let displayText = "undefined. knobber."
-    const { currentText } = flash.data
-    if (currentText) displayText = currentText
+    const { text } = flash.data
+    const { title, subheader } = text
 
     return <Box sx={{ width: 350, height: 50, textAlign:"center"}}>
-                <Typography variant="h4" sx={{ fontWeight:"lighter", color: primaryColor }}>
-                    { displayText }
+                <Typography variant="h4" gutterBottom sx={{ 
+                    fontWeight:"lighter", 
+                    color: primaryColor 
+                }}>
+                    { title }
+                </Typography>
+                <Typography variant="h5" sx={{ 
+                    fontWeight:"lighter",
+                 }}>
+                    { subheader }
                 </Typography>
             </Box>
 }
