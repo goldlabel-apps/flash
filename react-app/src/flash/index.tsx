@@ -16,7 +16,9 @@ import { getDisplay } from './ActionScript/methods/getDisplay'
 import { getElement } from './ActionScript/methods/getElement'
 import { getSizes } from './ActionScript/methods/getSizes'
 import { setPosition } from './ActionScript/methods/setPosition'
-import { fade } from './ActionScript/effects/fade'
+import { 
+    fadeIn,
+} from './ActionScript/effects/fade'
 import { move } from './ActionScript/effects/move'
 
 import { textAS } from './ActionScript/clips/textAS'
@@ -37,7 +39,7 @@ export {
     getElement,
     setPosition,
     getSizes,
-    fade,
+    fadeIn,
     move,
     setListeners,
     Icon,

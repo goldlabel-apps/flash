@@ -23,6 +23,8 @@ import {
 export default function Stage() {
   const dispatch = useAppDispatch()
   const flash = useAppSelector(selectFlash)
+  const { showPrevNext, showFlashMenu } = flash.data
+  
   React.useEffect(() => {
     const { started } = flash.data
     if (!started){
@@ -32,6 +34,7 @@ export default function Stage() {
       }, 333)
     }
 }, [flash, dispatch])
+
 
   const display = getDisplay()
   //@ts-ignore
@@ -43,69 +46,64 @@ export default function Stage() {
     zIndex: 1,
     postition: "relative",
   }
-  
+
   return <Box id="stage" sx={ stageStyle }>
 
-            <Box id="flashMenu" sx={{ 
+              <Box id="debugger" sx={{
+                zIndex: 123456,
+                position: "absolute",
+                
+              }}>
+                <pre>{JSON.stringify( flash.data, null, 2 )}</pre>
+              </Box>
+
+              <Box id="text" sx={{
+                opacity: 0, 
+                position: "absolute",
+                zIndex:100, 
+                width: 350, 
+                height: 100,
+              }}><Text /></Box>
+            
+            { showFlashMenu ? <Box id="flashMenu" sx={{ 
               opacity: 1, 
               position: "absolute",
-              zIndex: 1000, 
+              zIndex: 100023, 
               width: 50, 
               height: 50,
               top: 8,
               right: 8,
-            }}><FlashMenu /></Box>
+            }}><FlashMenu /></Box> : null }
 
-            <Box id="timemachine" sx={{ 
-              opacity: 0, 
-              position: "absolute",
-              zIndex: 150,
-              width: 149, 
-              height: 188,
-            }}><Timemachine /></Box>
+            
 
-            <Box id="text" sx={{ 
-              opacity: 0, 
-              position: "absolute",
-              zIndex:100, 
-              width: 350, 
-              height: 75,
-            }}><Text /></Box>
-
-            <Box id="prev" sx={{ 
-              opacity: 1, 
-              position: "absolute",
-              zIndex:10001, 
-              bottom: 8,
-              left: 8,
-              width: 50, 
-              height: 50,
-            }}>
-              <IconButton
-                color="primary"
-                size="large"
-              >
-                <Icon icon="arrowl" />
-              </IconButton>
-            </Box>
-
-            <Box id="next" sx={{ 
-              opacity: 1, 
-              position: "absolute",
-              zIndex:10002, 
-              bottom: 8,
-              right: 8,
-              width: 50, 
-              height: 50,
-            }}>
-              <IconButton
-                color="primary"
-                size="large"
-              >
-                <Icon icon="arrowr" />
-              </IconButton>
-            </Box>
-
-
+            { showPrevNext ? <React.Fragment>
+                              <Box id="prev" sx={{ 
+                                opacity: 1, 
+                                position: "absolute",
+                                zIndex:10001, 
+                                bottom: 8,
+                                left: 8,
+                                width: 50, 
+                                height: 50,
+                              }}>
+                                <IconButton color="primary" size="large" >
+                                  <Icon icon="arrowl" />
+                                </IconButton>
+                              </Box>
+                              <Box id="next" sx={{ 
+                                opacity: 1, 
+                                position: "absolute",
+                                zIndex:10002, 
+                                bottom: 8,
+                                right: 8,
+                                width: 50, 
+                                height: 50,
+                              }}>
+                                <IconButton color="primary" size="large">
+                                  <Icon icon="arrowr" />
+                                </IconButton>
+                              </Box>
+                            </React.Fragment> : null }
           </Box>
 }

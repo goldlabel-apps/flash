@@ -1,21 +1,27 @@
 import { 
     setPosition,
-    fade,
+    setFlash,
+    fadeIn,
 } from '../../'
 import { store } from "../../_app/store"
 
 export const textAS = (action: string) => {
     try {
-        const { text, started } = store.getState().flash.data
-        const { title, subheader } = text
+        const { screens, started, index } = store.getState().flash.data
+        const { title, subheader } = screens[index]
+
         switch(action) {
             case "init":
                 if (!started){
-                    setPosition("text", "centered", { top: 0, left: 0 } )
-                    fade("text", {
+                    setPosition("text", "centered", { top: -25, left: 0 } )
+                    fadeIn("text", {
                         direction: "in",
                         onComplete: () => {
-                            console.log ("textAS init complete")
+                            store.dispatch(setFlash({ key:"textAS", value: {
+                                initted: true,
+                                status: "visible",
+                            } }))
+                            // console.log ("textAS init complete")
                         }
                     })
                 }

@@ -1,35 +1,25 @@
-// @ts-ignore
 import { gsap, Power1 } from 'gsap'
 import { getElement } from '../../'
+const duration = 1
 
-const duration = 2
-
-export const fade = (divId: string, options: any) => {
+export const fadeIn = (divId: string, options: any) => {
     try {
-        let dir = "in"
-        const { direction } = options
-        if (direction) dir = direction
         const el = getElement(divId)
-
         if (!el) {
-            console.warn('fade failed for', divId)
+            console.warn('fadeIn failed for', divId)
             return false
         }
         let onComplete = () => {}
-        if (options.onComplete){
-            onComplete = options.onComplete
-        }
-        let targetOpacity = 1
-        if (dir === "out") targetOpacity = 0
+        if (options.onComplete) onComplete = options.onComplete
         gsap.to(`#${divId}`, {
-            opacity: targetOpacity,
+            opacity: 1,
             ease: Power1.easeOut,
             duration,
             //@ts-ignore
             onComplete,
         })
     } catch (error) {
-        console.warn('fade error', error)
+        console.warn('fadeIn error', error)
         return false
     }
 }

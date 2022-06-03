@@ -1,29 +1,23 @@
 import pJSON from "../../package.json"
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-
+// import { getDisplay } from "./"
+console.warn(`${pJSON.name} ${pJSON.version}`)
 
 const initialState: any = {
     data: {
-        pJSON,
-        index: 0,
-        text: {
-            title: 'Hello',
-            subheader: 'World',
-        },
+        index: 1,
+        showPrevNext: false,
+        showFlashMenu: false,
         screens:[
             {
-                screen1: {
-                    type: 'text',
-                    title: 'Screen 1',
-                    subheader: 'screen1Subheader',
-                },
+                type: 'text',
+                title: 'hello',
+                subheader: 'world',
             },
             {
-                screen2: {
-                    type: 'text',
-                    title: 'Screen 2',
-                    subheader: 'screen2Subheader',
-                },
+                type: 'text',
+                title: 'screen 2',
+                subheader: 'this is flash',
             },
         ],
     },
