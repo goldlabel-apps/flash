@@ -2,9 +2,9 @@ import {
     getElement,
     setPosition,
     fade,
-} from '../'
+} from '../../'
 
-export const pingpongballAS = () => {
+export const timemachineAS = () => {
     try {
         const divId = "pingpongball"
         const el = getElement(divId)

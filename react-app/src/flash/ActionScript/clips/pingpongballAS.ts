@@ -2,9 +2,9 @@ import {
     getElement,
     setPosition,
     fade,
-} from '../'
+} from '../../'
 
-export const timemachineAS = () => {
+export const pingpongballAS = () => {
     try {
         const divId = "pingpongball"
         const el = getElement(divId)
@@ -13,7 +13,7 @@ export const timemachineAS = () => {
         fade(el.id, {})
         return true
     } catch (error) {
-        console.warn("bouncePingpongball error", error)
+        console.warn("pingpongballAS error", error)
         return false
     }   
 }

@@ -1,30 +1,28 @@
-// @ts-ignore
 import { gsap, Power1 } from 'gsap'
 import { getElement } from '../../'
 const duration = 5
 
-export const move = (divId: string, options: any) => {
+export interface OptionsShape {
+    x: number
+    y: number
+    onComplete: any
+}
+
+export const move = (divId: string, options: OptionsShape) => {
     try {
-        
         const el = getElement(divId)
-        if (!el) {
-            console.warn(divId, 'not found')
-            return false
-        }
+        if (!el) console.warn(divId, 'not found')
+        if (!el) return
         let newX = 0
-        // let newY = 0
         const { x } = options
         if (x) newX = x
-        // if (y) newY = y
         let onComplete = () => {}
         if (options.onComplete) onComplete = options.onComplete
         
         gsap.to(`#${divId}`, {
             x: newX,
-            // y: newY,
             ease: Power1.easeOut,
             duration,
-            //@ts-ignore
             onComplete,
         })
     } catch (error) {

@@ -13,10 +13,7 @@ import { Icon } from '../'
 export default function Flash() {
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null)
     const open = Boolean(anchorEl)
-
     const handleMenuSelect = (item: string) => {
-        
-
         switch(item) {
             case "github":
                 // console.log("open repo", item)
@@ -30,7 +27,6 @@ export default function Flash() {
             default:
               // code block
           }
-
         closeFlashMenu()
         return true
     }
@@ -46,6 +42,7 @@ export default function Flash() {
     return (
         <React.Fragment>
                 <IconButton
+                    size="large"
                     color="primary"
                     id="flash-menu-button"
                     aria-controls={open ? 'flash-menu' : undefined}

@@ -11,10 +11,14 @@ import {
   Text,
   Timemachine,
   textAS,
+  Icon,
 } from './'
 import {
   Box,
+  IconButton,
 } from '@mui/material'
+
+// let displayText = `${flash.data.pJSON.name} ${flash.data.pJSON.version}`
 
 export default function Stage() {
   const dispatch = useAppDispatch()
@@ -23,7 +27,7 @@ export default function Stage() {
     const { started } = flash.data
     if (!started){
       setTimeout(() => {
-        textAS()
+        textAS("init")
         dispatch(setFlash({key: "started", value: true }))
       }, 333)
     }
@@ -37,18 +41,19 @@ export default function Stage() {
     width: displayW,
     height: displayH,
     zIndex: 1,
-    overflow: "hidden",
     postition: "relative",
   }
   
   return <Box id="stage" sx={ stageStyle }>
 
             <Box id="flashMenu" sx={{ 
-              opacity: 0, 
+              opacity: 1, 
               position: "absolute",
               zIndex: 1000, 
               width: 50, 
               height: 50,
+              top: 8,
+              right: 8,
             }}><FlashMenu /></Box>
 
             <Box id="timemachine" sx={{ 
@@ -66,6 +71,41 @@ export default function Stage() {
               width: 350, 
               height: 75,
             }}><Text /></Box>
+
+            <Box id="prev" sx={{ 
+              opacity: 1, 
+              position: "absolute",
+              zIndex:10001, 
+              bottom: 8,
+              left: 8,
+              width: 50, 
+              height: 50,
+            }}>
+              <IconButton
+                color="primary"
+                size="large"
+              >
+                <Icon icon="arrowl" />
+              </IconButton>
+            </Box>
+
+            <Box id="next" sx={{ 
+              opacity: 1, 
+              position: "absolute",
+              zIndex:10002, 
+              bottom: 8,
+              right: 8,
+              width: 50, 
+              height: 50,
+            }}>
+              <IconButton
+                color="primary"
+                size="large"
+              >
+                <Icon icon="arrowr" />
+              </IconButton>
+            </Box>
+
 
           </Box>
 }

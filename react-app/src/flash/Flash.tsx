@@ -10,17 +10,15 @@ import { getDesignTokens } from './_app/theme'
 import { 
   Stage,
   setListeners,
+  onWindowResize,
 } from './'
 
-export default function Flash() {
-  
+export default function Flash() {  
   const theme = createTheme(getDesignTokens('light'))
-
-  
 
   React.useEffect(() => {
     setListeners()
-    // console.log ("listeners", listeners)
+    onWindowResize()
   }, [])
 
   return ( <Provider store={store}>
