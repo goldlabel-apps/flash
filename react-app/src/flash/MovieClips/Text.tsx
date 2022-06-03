@@ -8,7 +8,7 @@ import {
     Typography,
 } from '@mui/material'
 
-const TextClip = (props: any) => {
+const Text = (props: any) => {
     const theme = useTheme()
     const primaryColor = theme.palette.primary.main
 
@@ -25,4 +25,4 @@ const TextClip = (props: any) => {
             </Box>
 }
 
-export default TextClip
+export default Text

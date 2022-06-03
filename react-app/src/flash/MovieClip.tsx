@@ -1,35 +1,20 @@
 import * as React from 'react';
-import { 
-  FlashMenu,
-  getDisplay,
-  Text,
-  Timemachine,
-} from './'
 import {
   Box,
 } from '@mui/material'
 
 export interface MovieClipShape {
-    id: string,
+    divId: string
+    zIndex: number
 }
 
 export default function MovieClip(props: MovieClipShape) {
 
-  const display = getDisplay()
-  //@ts-ignore
-  const { displayW, displayH } = display
-  
-  const moviclipStyle = {
-    width: displayW,
-    height: displayH,
-    zIndex: 1,
-    overflow: "hidden",
-    postition: "relative",
+  const movieclipStyle = {
+    border: "1px solid yellow",
   }
   
-  return <Box id="stage" sx={ moviclipStyle }>
-
-            kahsfsof
-
+  return <Box id="stage" sx={ movieclipStyle }>
+            MovieClip
           </Box>
 }
