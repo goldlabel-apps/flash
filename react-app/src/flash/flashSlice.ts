@@ -5,7 +5,7 @@ console.warn(`${pJSON.name} ${pJSON.version}`)
 
 const initialState: any = {
     data: {
-        index: 1,
+        index: 0,
         showPrevNext: false,
         showFlashMenu: false,
         screens:[

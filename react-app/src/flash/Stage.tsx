@@ -9,7 +9,6 @@ import {
   setFlash,
   getDisplay,
   Text,
-  Timemachine,
   textAS,
   Icon,
 } from './'
