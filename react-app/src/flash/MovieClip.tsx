@@ -4,7 +4,8 @@ import {
 } from '@mui/material'
 
 export interface MovieClipShape {
-    divId: string,
+    divId: string
+    zIndex: number
 }
 
 export default function MovieClip(props: MovieClipShape) {
@@ -14,8 +15,6 @@ export default function MovieClip(props: MovieClipShape) {
   }
   
   return <Box id="stage" sx={ movieclipStyle }>
-
-            kahsfsof
-
+            MovieClip
           </Box>
 }

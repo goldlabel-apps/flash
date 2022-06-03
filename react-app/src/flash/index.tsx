@@ -6,7 +6,9 @@ import MovieClip from './MovieClip'
 
 
 import FlashMenu from './_app/FlashMenu'
-import {setListeners} from './_app/setListeners'
+import { setListeners } from './ActionScript/events/setListeners'
+import { onWindowResize } from './ActionScript/events/onWindowResize'
+
 import Icon from './_app/theme/Icon'
 import {setFlash} from './_app/flashSlice'
 
@@ -25,7 +27,9 @@ import { move } from './ActionScript/effects/move'
 
 export {
     Flash,
-    FlashMenu,
+    setFlash,
+
+    onWindowResize,
     Stage,
 
     MovieClip,
@@ -35,6 +39,7 @@ export {
     Mumma,
     Text,
     textAS,
+    FlashMenu,
     
     getDisplay,
     getElement,
@@ -45,6 +50,6 @@ export {
     move,
     setListeners,
     Icon,
-    setFlash,
+    
 }
 export const selectFlash = (state: RootState) => state.flash

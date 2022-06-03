@@ -9,7 +9,7 @@ const initialState: FlashShape = {
     data: {
         shape: 'FlashShape',
         pJSON,
-        currentText: 'This is not Flash.',
+        currentText: 'This is a Time Machine',
     },
 }
 
