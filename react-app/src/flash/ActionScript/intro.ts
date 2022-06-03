@@ -20,16 +20,16 @@ export const intro = () => {
             onComplete: () => {}
         })
 
-        let newX = 0
-        // let newY = 0
-        const display = getDisplay()
-        if (display){
-            newX = display.displayW
-        }
-        move('timemachine', {
-            x: newX,
-            // y: 0,
-        })
+        // let newX = 0
+        // // let newY = 0
+        // const display = getDisplay()
+        // if (display){
+        //     newX = display.displayW /2
+        // }
+        // move('timemachine', {
+        //     x: newX,
+        //     // y: 0,
+        // })
 
 
     } catch (error) {

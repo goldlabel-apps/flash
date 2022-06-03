@@ -49,9 +49,7 @@ export default function Stage() {
               zIndex: 1000, 
               width: 50, 
               height: 50,
-            }}>
-              <FlashMenu />
-            </Box>
+            }}><FlashMenu /></Box>
 
             <Box id="timemachine" sx={{ 
               opacity: 0, 
@@ -59,9 +57,7 @@ export default function Stage() {
               zIndex: 150,
               width: 149, 
               height: 188,
-            }}>
-              <Timemachine />
-            </Box>
+            }}><Timemachine /></Box>
 
             <Box id="textClip" sx={{ 
               opacity: 0, 
@@ -69,9 +65,7 @@ export default function Stage() {
               zIndex:100, 
               width: 350, 
               height: 75,
-            }}>
-              <TextClip />
-            </Box>
+            }}><TextClip /></Box>
 
           </Box>
 }
