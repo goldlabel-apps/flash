@@ -1,9 +1,8 @@
-## Flash
-> by listingslab
+# Flash
 
-Yep, we have ridiculous and pointlessly reinvented Flash in React so you don't have to. Well, Adobe didn't want the name anymore, so we nicked it. Whadddya gonna do?
+> by listingslab. We have ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you don't have to 
 
-#### Features
+## Features
 
 - Animation using Greensock
 - SVG Graphics
@@ -12,4 +11,6 @@ Yep, we have ridiculous and pointlessly reinvented Flash in React so you don't h
 - Material UI
 - TypeScript
 
-Forget about it. (Donnie Brasco)
+_© copyright_  
+
+Well... Adobe didn't want the name anymore, so we nicked it. Whadya gonna do huh? Forget about it. (Donnie Brasco)

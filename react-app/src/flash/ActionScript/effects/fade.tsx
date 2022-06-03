@@ -1,6 +1,7 @@
 // @ts-ignore
 import { gsap, Power1 } from 'gsap'
 import { getElement } from '../../'
+
 const duration = 2
 
 export const fade = (divId: string, options: any) => {

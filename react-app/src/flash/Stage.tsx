@@ -32,12 +32,10 @@ export default function Stage() {
   const display = getDisplay()
   //@ts-ignore
   const { displayW, displayH } = display
-
   
   const stageStyle = {
     width: displayW,
     height: displayH,
-    textAlign: 'center',
     zIndex: 1,
     overflow: "hidden",
     postition: "relative",
@@ -50,33 +48,24 @@ export default function Stage() {
               position: "absolute",
               zIndex: 1000, 
               width: 50, 
-              height: 50, 
-              overflow:"hidden",
-            }}>
-              <FlashMenu />
-            </Box>
+              height: 50,
+            }}><FlashMenu /></Box>
 
             <Box id="timemachine" sx={{ 
               opacity: 0, 
               position: "absolute",
               zIndex: 150,
               width: 149, 
-              height: 188, 
-              overflow:"hidden",
-            }}>
-              <Timemachine />
-            </Box>
+              height: 188,
+            }}><Timemachine /></Box>
 
             <Box id="textClip" sx={{ 
               opacity: 0, 
               position: "absolute",
               zIndex:100, 
               width: 350, 
-              height: 75, 
-              overflow:"hidden",
-            }}>
-              <TextClip />
-            </Box>
+              height: 75,
+            }}><TextClip /></Box>
 
           </Box>
 }
