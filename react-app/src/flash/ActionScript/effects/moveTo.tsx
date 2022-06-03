@@ -7,14 +7,9 @@ const duration = 1
 
 export const moveTo = (divId, position, offset) => {
     try {
-        console.error('moveTo divId', divId)
         const el = getElement(divId)
-        if (!el) {
-            console.error('No element called ', divId)
-            return false
-        }
+        if (!el) return false
         const sizes = getSizes(divId)
-        // @ts-ignore
         const { stageW, stageH, elW, elH } = sizes
         let pos
         if (position === `topleft`)
@@ -52,7 +47,6 @@ export const moveTo = (divId, position, offset) => {
                 x: stageW - elW,
                 y: stageH - elH,
             }
-
         if (position === `middleleft`)
             pos = {
                 x: 0,
@@ -60,22 +54,18 @@ export const moveTo = (divId, position, offset) => {
             }
 
         const { x, y } = pos
-
-        // ease: Power1.easeOut,
-        //     
-        //     //@ts-ignore
-        //     onComplete,
-
-
+        
         gsap.to(`#${divId}`, {
-
             duration,
             ease: Power1.easeOut,
             x: x + offset.left,
             y: y + offset.top,
-            onComplete: () => {},
+            onComplete: () => {
+                // console.log ("moveTo done")
+            },
         })
     } catch (error) {
+        console.log ("moveTo error", error)
         return false
     }
 }
